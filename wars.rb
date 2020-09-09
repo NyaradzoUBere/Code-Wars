@@ -4,3 +4,13 @@
 # end
 
 
+# LeetCode Easy
+
+# heights = [1,1,4,2,1,3]
+
+# def height_checker(heights)
+#     new_heights = []
+#     heights.each do (height) {
+#         if height > 1
+#     }
+# end
