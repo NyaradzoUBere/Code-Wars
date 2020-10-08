@@ -356,3 +356,30 @@
 // }
 
 // balancedStringSplit("RLLLLRRRLR")
+
+// UNSOLVED: Shuffle Array
+
+// function restoreString(s, indices) {
+//     let separateString = s.split("")
+//     let newStringArray = []
+//     console.log(separateString)
+//     for (let i = 0; i < indices.length; i++){
+//         newStringArray.push(separateString[indices[i]])
+//     }
+//     console.log(newStringArray)
+// }
+
+// restoreString("codeleet", [4,5,6,7,0,2,1,3])
+
+// SOLVED: Given a set of consecutive integers in an array, how can you determine if a number is missing and which one is missing. Ex: (31, 32, 33, 35, 36)
+
+// function missingNumber(array) {
+//     let missingNumber = []
+//     for (let i = 0; i < array.length; i++) {
+//         array[i] === array[i + 1] - 1 ? null : missingNumber.push(array[i] + 1)
+//     }
+//     missingNumber.pop()
+//     console.log(missingNumber)
+// }
+
+// missingNumber([5, 6, 8, 9])
