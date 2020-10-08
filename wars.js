@@ -417,3 +417,26 @@
 // }
 
 // defangIPaddr("255.100.50.0")
+
+// SOLVED: Remove the first occurrence of a given 'search string' from a string
+function removeFirstN(string, n) {
+    let stringArray = string.split(" ")
+    // let newStringArray = []
+    // let discardedString = []
+    // newStringArray.push(stringArray[0])
+    // for (let i = 1; i < stringArray.length; i++) {
+    //     if (stringArray[i] == n) {
+    //         discardedString[0] ? newStringArray.push(stringArray[i]) : discardedString.push(stringArray[i])
+    //     } else {
+    //         newStringArray.push(stringArray[i])
+    //     }
+    // }
+    // console.log(newStringArray.join(" "))
+
+    // Solution 2
+    // let index = string.indexOf(n)
+    // const firstHalf = string.slice(0, index - 1)
+    // const secondHalf = string.slice(index + n.length)
+    // console.log(firstHalf + secondHalf)
+}
+// removeFirstN("The quick brown fox jumps over the lazy dog", "the")
