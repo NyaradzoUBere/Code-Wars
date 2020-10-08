@@ -383,3 +383,37 @@
 // }
 
 // missingNumber([5, 6, 8, 9])
+
+// SOLVED: Number of Steps to Reduce a Number to Zero
+
+// function numberOfSteps(num) {
+//     let steps = 0
+//     while (num > 0) {
+//         // num % 2 === 0 ? (num = num / 2, steps += 1) : (num = num - 1, steps += 1)
+//         if (num % 2 === 0) {
+//             num = num / 2
+//             steps += 1
+//         } else {
+//             num = num - 1
+//             steps += 1
+//         }
+//     }
+//     return steps
+// }
+
+// numberOfSteps(123)
+
+// SOLVED: Defanging an IP Address  
+
+// function defangIPaddr(address) {
+//     let addressArray = address.split(".")
+//     let newArray = []
+//     for (let i = 0; i < addressArray.length; i++) {
+//         newArray.push(addressArray[i])
+//         newArray.push("[.]")
+//     }
+//     newArray.pop()
+//     console.log(newArray.join(""))
+// }
+
+// defangIPaddr("255.100.50.0")
