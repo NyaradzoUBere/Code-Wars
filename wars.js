@@ -419,8 +419,8 @@
 // defangIPaddr("255.100.50.0")
 
 // SOLVED: Remove the first occurrence of a given 'search string' from a string
-function removeFirstN(string, n) {
-    let stringArray = string.split(" ")
+// function removeFirstN(string, n) {
+//     let stringArray = string.split(" ")
     // let newStringArray = []
     // let discardedString = []
     // newStringArray.push(stringArray[0])
@@ -438,5 +438,103 @@ function removeFirstN(string, n) {
     // const firstHalf = string.slice(0, index - 1)
     // const secondHalf = string.slice(index + n.length)
     // console.log(firstHalf + secondHalf)
-}
+// }
 // removeFirstN("The quick brown fox jumps over the lazy dog", "the")
+
+// function fib(1) {
+//     array.push
+// }
+
+// SOLVED: Fibonnaci Number
+// function fib(n) {
+//     if(n == 0) {
+//         return 0
+//     } else if (n == 1) {
+//         return 1
+//     } else {
+//         return fib(n-1)+fib(n-2)
+//     }
+// }
+
+// fib(4)
+
+// UNSOLVED: Design Parking System
+// function ParkingSystem(big, medium, small) {
+
+// }
+
+// ParkingSystem(["ParkingSystem", "addCar", "addCar", "addCar", "addCar"]
+// [[1, 1, 0], [1], [2], [3], [1]])
+
+//SOLVED: Remove all even integers from an array
+// function onlyOdds(array) {
+
+    // SOLUTION 1
+    // let oddsArray = []
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i] % 2 !== 0) {
+    //         oddsArray.push(array[i])
+    //     }
+    // }
+    // console.log(oddsArray)
+
+    // SOLUTION 2
+    // array = array.filter(number => number % 2 !== 0)
+    // console.log(array)
+// }
+// onlyOdds([1,2,4,5,10,6,3])
+
+// SOLVED: Palindrome
+
+// function reversable(string) {
+//     let stringArray = string.split("")
+//     let reverse = []
+//     while (stringArray.length) {
+//         reverse.push(stringArray.pop())
+//     }
+//     reverse.join("") == string ? console.log("true") : console.log("false")
+// }
+
+// reversable("john")
+
+// SOLVED: fizzBuzz
+
+// function fizzBuzz(n) {
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 5 === 0 && i % 3 === 0) {
+//             console.log("fizzbuzz")
+//         } else if (i % 5 === 0) {
+//             console.log("buzz")
+//         } else if (i % 3 === 0) {
+//             console.log("fizz")
+//         } else {
+//             console.log(i)
+//         }
+//     }
+// }
+// fizzBuzz(15)
+
+// SOLVED: Anagram
+
+// function anagram(string1, string2) {
+//     let first = string1.toLowerCase()
+//     let second = string2.toLowerCase()
+//     let firstSortedArray = first.split("").sort()
+//     let secondSortedArray = second.split("").sort()
+//     firstSortedArray.join("") == secondSortedArray.join("") ? console.log("true") : console.log("false")
+// }
+// anagram("finder", "bye")
+
+// SOLVED: Find the Vowels
+
+// function vowels(string) {
+//     const stringArray = string.split("")
+//     const vowels = ["a", "e", "i", "o", "u"]
+//     let count = 0
+//     for (let x = 0; x < stringArray.length; x++) {
+//         vowels.includes(stringArray[x])? count++ : null
+//     }
+//     console.log(count)
+// }
+
+// vowels("beautiful")
