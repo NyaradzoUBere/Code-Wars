@@ -538,3 +538,39 @@
 // }
 
 // vowels("beautiful")
+
+// Fibonacci
+
+// function fibonacci(n) {
+//     let fibonacciN = 0
+//     if (n === 0) {
+//         console.log(0)
+//     } else if (n === 1) {
+//         console.log(1)
+//     } else {
+//         fibonacciN = fibonacci(n - 1) + fibonacci(n - 2)
+//     }
+// }
+
+// fibonacci(n)
+
+//SOLVED: Maximum 69 Number
+// function maximum69Number(number) {
+//     const numberArray = number.toString().split("")
+//     let newArray = []
+//     let sixArray = []
+//     for (let i = 0; i < numberArray.length; i++) {
+//         if (numberArray[i] === "9") {
+//             newArray.push(numberArray[i])
+//         } else {
+//             if (sixArray[0]) {
+//                 newArray.push(numberArray[i])
+//             } else {
+//                 (newArray.push("9"), sixArray.push(numberArray[i]))
+//             }
+//         }
+//     }
+//     return parseInt(newArray.join(""))
+// }
+
+// maximum69Number(9996)
