@@ -574,3 +574,40 @@
 // }
 
 // maximum69Number(9996)
+
+// MAYBE
+// function setUnique(array) {
+//     let returnArray = []
+
+//     for (const element of array) {
+//         returnArray = unique(returnArray, element)
+//     }
+//     return returnArray
+// }
+
+// const unique = (returnArray, element, i = 1) => {
+//     if (returnArray.includes(element)) {
+//         if(returnArray.includes(element + 1)) {
+//             unique(returnArray, element, i + 1)
+//         } else {
+//             returnArray.push(element + i)
+//         }
+//     } else {
+//         returnArray.push(element)
+//     }
+//     return returnArray
+// }
+
+// console.log(setUnique(["apple", "banana", "apple", "banana"]))
+
+// SOLVED: List out transactions uniquely
+function setUnique(array) {
+    let sortedArray = array.sort()
+    let transactions = {}
+    for (let i = 0; i < sortedArray.length; i++) {
+        transactions[sortedArray[i]] = (transactions[sortedArray[i]] || 0) + 1
+    }
+    return transactions
+}
+
+console.log(setUnique(["banana", "pear", "apple", "banana", "pear"]))
