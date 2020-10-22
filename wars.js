@@ -522,8 +522,9 @@
 //     let firstSortedArray = first.split("").sort()
 //     let secondSortedArray = second.split("").sort()
 //     firstSortedArray.join("") == secondSortedArray.join("") ? console.log("true") : console.log("false")
+//     // first == second ? console.log(true) : console.log(false)
 // }
-// anagram("finder", "bye")
+// anagram("eyb", "bye")
 
 // SOLVED: Find the Vowels
 
@@ -576,13 +577,15 @@
 // maximum69Number(9996)
 
 // SOLVED: List out transactions uniquely
-// function setUnique(array) {
-//     let sortedArray = array.sort()
-//     let transactions = {}
+// function setUnique(transactions) {
+//     const sortedArray = transactions.sort()
+//     let groupedItems = []
+//     let items = {}
 //     for (let i = 0; i < sortedArray.length; i++) {
-//         transactions[sortedArray[i]] = (transactions[sortedArray[i]] || 0) + 1
+//         items[sortedArray[i]] = (items[sortedArray[i]] || 0) + 1
 //     }
-//     return transactions
+//     (Object.entries(items)).map(item => groupedItems.push(item.join(" ")))
+//     return groupedItems
 // }
 
 // console.log(setUnique(["banana", "pear", "apple", "banana", "pear"]))
@@ -603,5 +606,125 @@
 //     return secondMax
 // }
 
-// console.log(maxProduct([3,4,5,2]))
+// console.log(maxProduct([3,4,5,2])) 
+
+// *****************************
+
+// SOLVED: Palindrome
+
+// function palindrome(string) {
+//     string = string.toLowerCase()
+//     const array = string.split("")
+//     let secondArray = []
+
+//     while (array.length) {
+//         secondArray.push(array.pop())
+//     }
+//     if (secondArray.join("") == string) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// console.log(palindrome("Racecar"))
+
+
+// function fizzBuzz(number) {
+//     for (let i = 1; i <= number; i++) {
+//         if (i % 15 === 0) {
+//             console.log("fizzbuzz")
+//         } else if (i % 3 === 0) {
+//             console.log("fizz")
+//         } else if (i % 5 === 0) {
+//             console.log("buzz")
+//         } else {
+//             console.log(i)
+//         }
+//     }
+// }
+
+// fizzBuzz(15)
+
+// SOLVED: ENCODED
+// function decode(encoded) {
+//     const numberPairs = {
+//         "65": "A",
+//         "66": "B",
+//         "67": "C",
+//         "68": "D",
+//         "69": "E",
+//         "70": "F",
+//         "71": "G",
+//         "72": "H",
+//         "73": "I",
+//         "74": "J",
+//         "75": "K",
+//         "76": "L",
+//         "77": "M",
+//         "78": "N",
+//         "79": "O",
+//         "80": "P",
+//         "81": "Q",
+//         "82": "R",
+//         "83": "S",
+//         "84": "T",
+//         "85": "U",
+//         "86": "V",
+//         "87": "W",
+//         "88": "X",
+//         "89": "Y",
+//         "90": "Z",
+//         "97": "a",
+//         "98": "b",
+//         "99": "c",
+//         "100": "d",
+//         "101": "e",
+//         "102": "f",
+//         "103": "g",
+//         "104": "h",
+//         "105": "i",
+//         "106": "j",
+//         "107": "k",
+//         "108": "l",
+//         "109": "m",
+//         "110": "n",
+//         "111": "o",
+//         "112": "p",
+//         "113": "q",
+//         "114": "r",
+//         "115": "s",
+//         "116": "t",
+//         "117": "u",
+//         "118": "v",
+//         "119": "w",
+//         "120": "x",
+//         "121": "y",
+//         "122": "z",
+//         "32": " "
+//     }
+//     const digitsArray = encoded.split("")
+//     let reversedArray = []
+//     let numberDecode = []
+//     let letterDecode = []
+//     while (digitsArray.length) {
+//         reversedArray.push(digitsArray.pop())
+//     }
+//     for (let i = 0; i < reversedArray.length; i = i+2) {
+//         if (reversedArray[i] != "1") {
+//             numberDecode.push(reversedArray[i] + reversedArray[i+1])
+//         } else {
+//             numberDecode.push(reversedArray[i] + reversedArray[i+1] + reversedArray[i + 2])
+//             i++
+//         }
+//     }
+//     for (let i = 0; i < numberDecode.length; i++) {
+//         letterDecode.push(numberPairs[numberDecode[i]])
+//     }
+//     letterDecode = letterDecode.join("")
+//     return letterDecode
+
+
+// }
+// console.log(decode("2312179862310199501872379231018117927"))
 
