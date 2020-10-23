@@ -728,3 +728,59 @@
 // }
 // console.log(decode("2312179862310199501872379231018117927"))
 
+// UNSOLVED:
+// function solution(array) {
+//     const sortedArray = array.sort()
+//     let lowestNumber = []
+//     for (let i = 0; i < sortedArray.length; i++) {
+//         if (sortedArray[i + 1] !== sortedArray[i] + 1) {
+//             lowestNumber.push(sortedArray[i] + 1)
+//         }
+//     }
+//     lowestNumber.pop()
+//     return sortedArray.includes(lowestNumber)
+//     // return lowestNumber
+// }
+
+// console.log(solution([1, 3, 6, 4, 1, 2]))
+
+// SOLVED: To Lower Case
+// function toLowerCase(str) {
+//     let strArray = str.split("")
+//     let upperValues = {
+//         "A": "a",
+//         "B": "b",
+//         "C": "c",
+//         "D": "d",
+//         "E": "e",
+//         "F": "f",
+//         "G": "g",
+//         "H": "h",
+//         "I": "i",
+//         "J": "j",
+//         "K": "k",
+//         "L": "l",
+//         "M": "m",
+//         "N": "n",
+//         "O": "o",
+//         "P": "p",
+//         "Q": "q",
+//         "R": "r",
+//         "S": "s",
+//         "T": "t",
+//         "U": "u",
+//         "V": "v",
+//         "W": "w",
+//         "X": "x",
+//         "Y": "y",
+//         "Z": "z"
+//     }
+//     for (let i = 0; i < strArray.length; i++) {
+//         if (upperValues[strArray[i]]) {
+//             strArray[i] = upperValues[strArray[i]]
+//         }
+//     }
+//     return strArray.join("")
+// }
+
+// console.log(toLowerCase("WELCOME"))
