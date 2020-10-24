@@ -784,3 +784,10 @@
 // }
 
 // console.log(toLowerCase("WELCOME"))
+
+// UNSOLVED: Self Dividing Numbers
+function selfDividingNumbers(left, right) {
+
+};
+
+console.log(selfDividingNumbers(1, 22))
