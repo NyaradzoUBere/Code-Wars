@@ -786,8 +786,38 @@
 // console.log(toLowerCase("WELCOME"))
 
 // UNSOLVED: Self Dividing Numbers
-function selfDividingNumbers(left, right) {
+// function selfDividingNumbers(left, right) {
 
-};
+// };
 
-console.log(selfDividingNumbers(1, 22))
+// console.log(selfDividingNumbers(1, 22))
+
+function getWaitTimeEstimates(rides) {
+    let sortedArray = []
+    for (let i = 0; i < rides.length; i++) {
+        let splitString = rides[i].split(",")
+        let rideType = splitString.slice(1,2)
+        let ride = splitString.slice(0, 1)
+        let times = splitString.slice(2)
+        sortedArray.push(rideType.toString() + "," + ride.toString() + "," + times.toString())
+    }
+    sortedArray = sortedArray.sort()
+    let rideTimes = []
+    for (let i = 0; i < sortedArray.length; i++) {
+        let splitString = sortedArray[i].split(",")
+        let rideMetrics = splitString.slice(2)
+        let waitTime = Math.floor((parseInt(rideMetrics[2]) / parseInt(rideMetrics[1])) * parseInt(rideMetrics[0]))
+        rideTimes.push(waitTime)
+    }
+    for (let i = 0; i < sortedArray.length; i++) {
+        sortedArray[i] = sortedArray[i] + "," + rideTimes[i]
+    }
+    return sortedArray
+
+    // use a for loop to remove the numbers representing length of ride, seats, and people in line
+    // Sort to account for 2 conditions: Ride type name and wait time (use an if statement to check these parameters)
+    // Use another if statement to ensure rides of same types and wait time appear in alphabelical order by the title of the ride
+    // Re-order ride details to start with the title, then type, then wait time 
+}
+
+console.log(getWaitTimeEstimates(["Despicable Me Minion Mayhem,Simulator,4,20,30","Hollywood Rip Ride Rockit,Coaster,5,12,50", "Transformers: The Ride 3D,Simulator,4,10,40", "Race Through New York,Simulator,5,12,30", "Revenge of The Mummy,Coaster,5,16,60", "Jurassic Park River Adventure,Water,4,8,20", "The Forbidden Journey,Simulator,4,12,60"]))
