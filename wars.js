@@ -801,7 +801,6 @@ function getWaitTimeEstimates(rides) {
         let times = splitString.slice(2)
         sortedArray.push(rideType.toString() + "," + ride.toString() + "," + times.toString())
     }
-    sortedArray = sortedArray.sort()
     let rideTimes = []
     for (let i = 0; i < sortedArray.length; i++) {
         let splitString = sortedArray[i].split(",")
@@ -810,8 +809,17 @@ function getWaitTimeEstimates(rides) {
         rideTimes.push(waitTime)
     }
     for (let i = 0; i < sortedArray.length; i++) {
-        sortedArray[i] = sortedArray[i] + "," + rideTimes[i]
+        let splitString = rides[i].split(",")
+        let rideType = splitString.slice(1,2)
+        let ride = splitString.slice(0, 1)
+        sortedArray[i] = (rideType.toString() + "," + ride.toString() + "," + rideTimes[i])
     }
+    sortedArray = sortedArray.sort()
+    // return sortedArray
+    for (let i = 0; i < sortedArray.length; i++) {
+        sortedArray[i] = sortedArray[i].split(",")
+    }
+
     return sortedArray
 
     // use a for loop to remove the numbers representing length of ride, seats, and people in line
