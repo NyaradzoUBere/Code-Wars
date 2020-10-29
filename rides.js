@@ -12,6 +12,7 @@ function makeArray(rideString) {
     }
     return rideArray
 }
+// console.log(makeArray("Despicable Me Minion Mayhem,Simulator,4,20,30"))
 
 function calcWaitTime(rideArray) {
     let lineLength = rideArray[4]
@@ -20,6 +21,7 @@ function calcWaitTime(rideArray) {
     let waitTime = Math.floor(lineLength / seats * duration)
     return waitTime
 }
+// console.log(calcWaitTime(makeArray("Despicable Me Minion Mayhem,Simulator,4,20,30")))
 
 function createArrayForEachRideString(arrayOfRideStrings) {
     // return arrayOfRideStrings.map(rideString => {
@@ -37,6 +39,7 @@ function createArrayForEachRideString(arrayOfRideStrings) {
     }
     return rideArray
 }
+// console.log(createArrayForEachRideString(ridesArray))
 
 function changeRideLayout(arrayOfRides) {
     let newRideOrder = []
@@ -47,6 +50,7 @@ function changeRideLayout(arrayOfRides) {
     // return newRideOrder
     return groupByRide(newRideOrder)
 }
+console.log(changeRideLayout(createArrayForEachRideString(ridesArray)))
 
 function groupByRide(rideSet) {
     let outterArray = []
@@ -86,33 +90,50 @@ function groupByRide(rideSet) {
 
 function reorderRides (group1, group2, group3) {
     let outterArray = []
-    for (let i = 0; i < group1.length; i++) {
-        if (group1[i][2] > group1[i+1][2]){
-            temp = group1[i];
-            group1[i] = group1[i+1];
-            group1[i+1] = temp;
-            outterArray.push(group1)
-            return outterArray
+
+    if (group1[1]) {
+        for (let i = 0; i < group1.length - 1; i++) {
+            if (group1[i][2] > group1[i+1][2]){
+                temp = group1[i];
+                group1[i] = group1[i+1];
+                group1[i+1] = temp;
+                outterArray.push(group1)
+                // return outterArray
+            }
         }
+    } else {
+        outterArray.push(group1)
     }
 
-    for (let i = 0; i < group2.length; i++) {
-        if (group2[i][2] > group2[i+1][2]){
-            temp = group2[i];
-            group2[i] = group2[i+1];
-            group2[i+1] = temp;
-            outterArray.push(group2)
+    if (group2[1]) {
+        for (let i = 0; i < group2.length - 1; i++) {
+            if (group2[i][2] > group2[i+1][2]){
+                temp = group2[i];
+                group2[i] = group2[i+1];
+                group2[i+1] = temp;
+                outterArray.push(group2)
+            }
         }
+    } else {
+        outterArray.push(group2)
     }
 
-    for (let i = 0; i < group3.length; i++) {
-        if (group3[i][2] > group3[i+1][2]){
-            temp = group3[i];
-            group3[i] = group3[i+1];
-            group3[i+1] = temp;
-            outterArray.push(group3)
+
+    if (group3[1]) {
+        for (let i = 0; i < group3.length - 1; i++) {
+            if (group3[1]) {
+                if (group3[i][2] > group3[i+1][2]){
+                    temp = group3[i];
+                    group3[i] = group3[i+1];
+                    group3[i+1] = temp;
+                    outterArray.push(group3)
+                }
+            } 
         }
+    } else {
+        outterArray.push(group3)
     }
+    
     return outterArray
     
 }
@@ -122,5 +143,5 @@ function reorderRides (group1, group2, group3) {
 // console.log(calcWaitTime(makeArray))
 // console.log(calcWaitTime(makeArray("Despicable Me Minion Mayhem,Simulator,4,20,30")))
 // console.log(createArrayForEachRideString(ridesArray))
-console.log(changeRideLayout(createArrayForEachRideString(ridesArray)))
+// console.log(changeRideLayout(createArrayForEachRideString(ridesArray)))
 // console.log(groupByRide(changeRideLayout(createArrayForEachRideString(ridesArray))))

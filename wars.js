@@ -801,6 +801,7 @@ function getWaitTimeEstimates(rides) {
         let times = splitString.slice(2)
         sortedArray.push(rideType.toString() + "," + ride.toString() + "," + times.toString())
     }
+    
     let rideTimes = []
     for (let i = 0; i < sortedArray.length; i++) {
         let splitString = sortedArray[i].split(",")
